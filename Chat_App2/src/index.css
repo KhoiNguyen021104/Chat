@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    /* @apply relative z-1 bg-whiten font-satoshi text-base font-normal text-body; */
+    position: relative;
+    z-index: 1;
+    background-color: #f1f5f9;
+    /* bg-whiten */
+    font-family: "Roboto", "Inter", sans-serif;
+    /* font-satoshi */
+    font-size: 1rem;
+    /* text-base */
+    font-weight: 400;
+    /* font-normal */
+    color: #4d5a6b;
+  }
+}
+
+@layer utilities {
+
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+}
+
+.ticontainer .tidot {
+  background-color: #90949c;
+}
+
+@keyframes mercuryTypingAnimation {
+  0% {
+    -webkit-transform: translateY(0px);
+  }
+
+  28% {
+    -webkit-transform: translateY(-5px);
+  }
+
+  44% {
+    -webkit-transform: translateY(0px);
+  }
+}
+
+.tidot {
+  display: inline-block;
+  border-radius: 2px;
+  height: 4px;
+  width: 4px;
+  margin-right: 2px;
+  animation: mercuryTypingAnimation 1.5s infinite ease-in-out;
+}
+
+.tidot:nth-child(1) {
+  animation-delay: 200ms;
+}
+
+.tidot:nth-child(2) {
+  animation-delay: 300mx;
+}
+
+.tidot:nth-child(3) {
+  animation-delay: 400mx;
+}
+
+
+* {
+  scroll-behavior: smooth !important;
+}
